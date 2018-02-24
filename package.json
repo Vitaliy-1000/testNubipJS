@@ -1,0 +1,26 @@
+{
+  "name": "testnubipjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wd:update": "awb standalone gecko chrome",
+    "wd:start": "awb start standalone",
+    "test": "mocha ./specs/*.spec.js --timeout 6000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vitaliy-1000/testNubipJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vitaliy-1000/testNubipJS/issues"
+  },
+  "homepage": "https://github.com/Vitaliy-1000/testNubipJS#readme",
+  "devDependencies": {
+    "awb": "^0.1.4",
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0"
+  }
+}
