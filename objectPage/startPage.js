@@ -1,6 +1,6 @@
 
-const { expect } = require('chai')
 const awb = require('awb')
+
 const defautlOpts = {
     withStandalone: true, // if true will run selenium standalone server when call start startDriver(), default true
     remote: false, // if remote true startDriver() will not work, default false
@@ -15,11 +15,12 @@ const defautlOpts = {
     },
     timeout: 5000 // time what will wait response from driver 
   }
-
-const {client, browser, element } = awb(defautlOpts)
+  
+const { client, element, browser } = awb(defautlOpts)
 
 class Login {
     constructor() {
+        this.clientBrowser = client;
         this.baseURL = 'http://localhost:3000'
         this.inputName = element('#formHorizontalEmail')
     }
