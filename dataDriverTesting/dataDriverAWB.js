@@ -17,4 +17,4 @@ const defautlOpts = {
   
 const { client, element, elements } = awb(defautlOpts)
 
-module.exports = client, element, elements
+module.exports = { client, element, elements }

@@ -2,7 +2,7 @@ const { expect } = require('chai')
 
 const Login = require('../objectPage/startPage.js')
 
-const client = require('../dataDriverTesting/dataDriverAWB')
+const { client, element, elements } = require('../dataDriverTesting/dataDriverAWB')
  
 const login = new Login()
 
@@ -21,9 +21,8 @@ describe('Google base example', () => {
   })
 
   it('start page', async () => {
-  // const isInput = await login.inputName.isDisplayed()
-  // expect(await isInput).to.eql(true)
-  await console.log(true)
+    const isInput = await login.inputName.isDisplayed()
+    expect(await isInput).to.eql(true)
   })
   
 })
