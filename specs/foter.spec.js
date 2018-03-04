@@ -26,7 +26,7 @@ const login = new Login()
 
 describe('Google base example', () => {
 
-  before(async () => {
+  before (async () => {
     await client.startDriver()
     await client.goTo(login.baseURL)
   })
