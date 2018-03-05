@@ -12,8 +12,8 @@
         "calculationingFarm":".btn.btn-default",
         "inputForCalculation":".form-control",
         "checkboxes":".checkbox-inline",
-        "checkedFarm":"div>label.checkbox-inline",
-        "checkedKeepCows":"span>label.checkbox-inline"
+        "checkedFarm":"span>label",
+        "checkedKeepCows":"div>label"
     },
 
     "dataForCalculation":{

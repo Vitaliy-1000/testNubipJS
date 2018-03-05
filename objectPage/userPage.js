@@ -33,12 +33,17 @@ class UserPage {
         }
     }
 
-    async clickCheckbox(clickObject) {
-        let objectsCheck = await Object.keys(await elements(clickObject));
-        let checkboxes = await objectsCheck.length;  
+    async clickCheckbox(checkboxes, clickObject) {
+        //let objectsCheck = await Object.keys(await elements(clickObject));
+        //await console.log( await elements(clickObject))
+        //await console.log(objectsCheck)
+        //let checkboxes = await objectsCheck.length; 
+        //await console.log(checkboxes) 
         let randomNumber = await Math.floor(Math.random() * checkboxes)
         await console.log(randomNumber)
         await elements(clickObject).get(randomNumber).click()
+        await console.log(await elements(clickObject).get(randomNumber).getText())
+        //await console.log(await elements(clickObject).get(0))
     }
 
 }

@@ -31,12 +31,13 @@ describe('testCase by NubipProject', () => {
   it('go to userPage', async function() {
     // login button
     await loginForm.loginGo(userName);
-    expect (await browser.getUrl()).to.eql(userPage.userURL)
-    expect (await userPage.areDisplayed(user)).to.eql(true)
+    //expect (await browser.getUrl()).to.eql(userPage.userURL)
+    //expect (await userPage.areDisplayed(user)).to.eql(true)
     // recording by farm
-    await userPage.dataCalculation(user.inputForCalculation, dataForCalculation);
-    //await userPage.clickCheckbox(user.checkedKeepCows);
-    await userPage.clickCheckbox(user.checkedFarm);
+    //await userPage.dataCalculation(user.inputForCalculation, dataForCalculation);
+    await userPage.clickCheckbox(2, user.checkedFarm);
+    await userPage.clickCheckbox(3, user.checkedKeepCows);
+    
   })
   
   
