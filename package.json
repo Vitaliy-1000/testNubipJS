@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Vitaliy-1000/testNubipJS#readme",
   "devDependencies": {
-    "awb": "^0.1.12",
+    "awb": "^0.1.13",
     "chai": "^4.1.2",
     "mocha": "^4.1.0"
   }

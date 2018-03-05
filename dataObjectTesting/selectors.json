@@ -1,0 +1,28 @@
+{
+    "login":{
+        "menuPanel":".navbar.navbar-inverse",
+        "inputName":"#formHorizontalEmail",
+        "loginButton":".btn.btn-default"
+    },
+    
+    "user":{
+        "menuPanel":".navbar-header",
+        "informEnterData":".btn.btn-warning",
+        "adding":".btn.btn-primary",
+        "calculationingFarm":".btn.btn-default",
+        "inputForCalculation":".form-control",
+        "checkboxes":".checkbox-inline",
+        "checkedFarm":"div>label.checkbox-inline",
+        "checkedKeepCows":"span>label.checkbox-inline"
+    },
+
+    "dataForCalculation":{
+        "pariod": "365",
+        "numberCows": "100",
+        "priceBy": "30",
+        "priceByEnergy": "5",
+        "salary": "50"
+    },
+
+    "userName": "ded"
+}

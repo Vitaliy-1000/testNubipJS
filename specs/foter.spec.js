@@ -1,28 +1,43 @@
 const { expect } = require('chai')
 
-const Login = require('../objectPage/startPage.js')
+const LoginForm = require('../objectPage/loginPage.js')
+const UserPage = require('../objectPage/userPage')
 
+const {login, user, dataForCalculation, userName} = require('../dataObjectTesting/selectors.json')
 const { client, element, elements } = require('../dataDriverTesting/dataDriverAWB')
  
-const login = new Login()
+const loginForm = new LoginForm()
+const userPage = new UserPage()
 
 let browser = null;
 browser = client;
 
-describe('Google base example', () => {
+describe('testCase by NubipProject', () => {
 
   before (async () => {
     await browser.startDriver()
-    await browser.goTo(login.baseURL)
+    await browser.goTo(loginForm.baseURL)
   })
   after(async () => {
     await browser.closeBrowser()
     await browser.stopDriver()
   })
-
-  it('start page', async () => {
-    const isInput = await login.inputName.isDisplayed()
-    expect(await isInput).to.eql(true)
+/*
+  it('login page', async () => {
+      expect (await browser.getUrl()).to.eql('http://localhost:3000/')
+      expect (await loginForm.areDisplyed(login)).to.eql(true)
+    });
+*/
+  it('go to userPage', async function() {
+    // login button
+    await loginForm.loginGo(userName);
+    expect (await browser.getUrl()).to.eql(userPage.userURL)
+    expect (await userPage.areDisplayed(user)).to.eql(true)
+    // recording by farm
+    await userPage.dataCalculation(user.inputForCalculation, dataForCalculation);
+    //await userPage.clickCheckbox(user.checkedKeepCows);
+    await userPage.clickCheckbox(user.checkedFarm);
   })
+  
   
 })
